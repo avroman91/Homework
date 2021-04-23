@@ -7,13 +7,13 @@ public class Homework8Task2 {
         int counter = 0;
         for (int i = 1; i <= 999; i++) {
             int hundredsI = i / 100;
-            int dozensI = (i - hundredsI * 100) / 10;
-            int digitsI = (i - hundredsI * 100 - dozensI * 10);
+            int dozensI = i % 100 / 10;
+            int digitsI = i % 100 % 10;
             for (int j = 0; j <= 999; j++) {
 
                 int hundredsJ = j / 100;
-                int dozensJ = (j - hundredsJ * 100) / 10;
-                int digitsJ = (j - hundredsJ * 100 - dozensJ * 10);
+                int dozensJ = j % 100 / 10;
+                int digitsJ = j % 100 % 10;
                 if (hundredsI + dozensI + digitsI == hundredsJ + dozensJ + digitsJ) {
                     counter++;
                 }
