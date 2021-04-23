@@ -6,12 +6,12 @@ public class HW8TaskFor100Stack {
     public static void main(String[] args) {
         String symbols = "{([])}";
         String check = "())[]{}";
-        System.out.println(checkForCorrectSymblols(symbols));
-        System.out.println(checkForCorrectSymblols(check));
+        System.out.println(checkForCorrectSymbols(symbols));
+        System.out.println(checkForCorrectSymbols(check));
 
     }
 
-    public static boolean checkForCorrectSymblols(String string) {
+    public static boolean checkForCorrectSymbols(String string) {
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < string.length(); i++) {

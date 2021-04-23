@@ -11,12 +11,12 @@ public class Homework8TaskFor100 {
     public static void main(String[] args) {
         String symbols = "{([])}";
         String check = "())[]{}";
-        System.out.println(checkForCorrectSymblols(symbols));
-        System.out.println(checkForCorrectSymblols(check));
+        System.out.println(checkForCorrectSymbols(symbols));
+        System.out.println(checkForCorrectSymbols(check));
 
     }
 
-    public static boolean checkForCorrectSymblols(String string) {
+    public static boolean checkForCorrectSymbols(String string) {
         ArrayList<Character> array = new ArrayList<>();
         for (int i = 0; i < string.length(); i++) {
             if (string.charAt(i) == '{' || string.charAt(i) == '[' || string.charAt(i) == '(') {
