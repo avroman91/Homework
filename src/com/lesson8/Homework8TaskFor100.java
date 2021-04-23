@@ -23,25 +23,23 @@ public class Homework8TaskFor100 {
                 array.add(string.charAt(i));
                 continue;
             }
-            if (string.charAt(i) == '}' || string.charAt(i) == ']' || string.charAt(i) == ')') {
-                if (string.charAt(i) == '}') {
-                    if (array.get(array.size() - 1) == '{') {
-                        array.remove(array.size() - 1);
-                    } else {
-                        return false;
-                    }
-                } else if (string.charAt(i) == ']') {
-                    if (array.get(array.size() - 1) == '[') {
-                        array.remove(array.size() - 1);
-                    } else {
-                        return false;
-                    }
-                } else if (string.charAt(i) == ')') {
-                    if (array.get(array.size() - 1) == '(') {
-                        array.remove(array.size() - 1);
-                    } else {
-                        return false;
-                    }
+            if (string.charAt(i) == '}') {
+                if (array.get(array.size() - 1) == '{') {
+                    array.remove(array.size() - 1);
+                } else {
+                    return false;
+                }
+            } else if (string.charAt(i) == ']') {
+                if (array.get(array.size() - 1) == '[') {
+                    array.remove(array.size() - 1);
+                } else {
+                    return false;
+                }
+            } else if (string.charAt(i) == ')') {
+                if (array.get(array.size() - 1) == '(') {
+                    array.remove(array.size() - 1);
+                } else {
+                    return false;
                 }
             }
         }
