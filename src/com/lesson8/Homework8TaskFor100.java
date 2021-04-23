@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Homework8TaskFor100 {
     public static void main(String[] args) {
         String symbols = "{([])}";
-        String check = "()[]{}";
+        String check = "())[]{}";
         System.out.println(checkForCorrectSymblols(symbols));
         System.out.println(checkForCorrectSymblols(check));
 
@@ -22,6 +22,9 @@ public class Homework8TaskFor100 {
             if (string.charAt(i) == '{' || string.charAt(i) == '[' || string.charAt(i) == '(') {
                 array.add(string.charAt(i));
                 continue;
+            }
+            if (array.isEmpty()) {
+                return false;
             }
             if (string.charAt(i) == '}') {
                 if (array.get(array.size() - 1) == '{') {
