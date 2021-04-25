@@ -13,7 +13,6 @@ public class Homework8TaskFor100 {
         String check = "())[]{}";
         System.out.println(checkForCorrectSymbols(symbols));
         System.out.println(checkForCorrectSymbols(check));
-
     }
 
     public static boolean checkForCorrectSymbols(String string) {
