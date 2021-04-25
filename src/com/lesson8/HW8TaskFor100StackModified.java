@@ -12,14 +12,11 @@ public class HW8TaskFor100StackModified {
 
     public static boolean checkForCorrectSymbols(String string) {
         Stack<Character> stack = new Stack<>();
-        String open = "({[";
         String pairs = "(){}[]";
 
-        char[] array = string.toCharArray();
-
         for (int i = 0; i < string.length(); i++) {
-            if (open.contains(array[i] + "")) {
-                stack.push(array[i]);
+            if (pairs.indexOf(string.charAt(i)) % 2 == 0) {
+                stack.push(string.charAt(i));
                 continue;
             }
             if (!stack.isEmpty() && pairs.indexOf(stack.peek()) == pairs.indexOf(string.charAt(i)) - 1) {
