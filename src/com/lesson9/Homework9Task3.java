@@ -6,9 +6,9 @@ package com.lesson9;
 
 public class Homework9Task3 {
     public static void main(String[] args) {
-        int [] array=new int[100];
-        for (int i=0;i <100;i++){
-            array[i]=i;
+        int[] array = new int[100];
+        for (int i = 0; i < 100; i++) {
+            array[i] = i;
         }
         System.out.println(isThisNumberInTheArray(array, 16));
     }
@@ -25,7 +25,7 @@ public class Homework9Task3 {
             } else {
                 last = mid - 1;
             }
-            mid = (last+first)/2;
+            mid = (last + first) / 2;
         }
         return false;
     }
