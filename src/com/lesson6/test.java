@@ -23,7 +23,7 @@ public class test {
                         if (triangleArray.isEmpty()) {
                             triangleArray.add(tmp);
                         }
-                        addToListIfTHereIsNoCopy(triangleArray,tmp);
+                        addToListIfTHereIsNoCopy(triangleArray, tmp);
 
                     }
                 }

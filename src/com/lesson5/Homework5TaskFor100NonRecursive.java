@@ -13,7 +13,7 @@ public class Homework5TaskFor100NonRecursive {
 
         List<String> result = new ArrayList<String>();
         char[] values = string.toCharArray();
-        int stack[] = new int[values.length];
+        int[] stack = new int[values.length];
         for (int i = 0; i < stack.length; i++) { // start from a specific point without duplicates
             stack[i] = stack.length - i - 1;
         }
@@ -33,8 +33,7 @@ public class Homework5TaskFor100NonRecursive {
                     stack[position]++;
                     if (!containsDuplicate(stack)) { //if false - mean that is not duplicate ;
                         break;
-                    }
-                    else {
+                    } else {
                         position = 0;
                     }
                 } else {

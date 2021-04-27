@@ -1,7 +1,6 @@
 package com.lesson5;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class test {
     public static void main(String[] args) {

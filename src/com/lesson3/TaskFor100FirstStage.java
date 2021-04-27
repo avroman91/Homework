@@ -11,7 +11,7 @@ public class TaskFor100FirstStage {
         ArrayList<Integer> arr = new ArrayList<>();
         int testValue = 3;
         arr.add(2);
-        if (checkForPrime==2){
+        if (checkForPrime == 2) {
             System.out.println("2 - is not a prime number. \nIt can be presented ad 2=2");
         } else {
             while (testValue <= checkForPrime) {

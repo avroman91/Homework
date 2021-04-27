@@ -17,7 +17,7 @@ public class Homework8Task2NewVersion {
         int[] array = new int[27];
         int quantityOfLuckyTicket = 0;
         for (int i = 1; i <= 999; i++) {
-            array[BasicFunctions.sumAllDigitsInInt(i)-1]++;
+            array[BasicFunctions.sumAllDigitsInInt(i) - 1]++;
         }
         for (int j : array) {
             quantityOfLuckyTicket += Math.pow(j, 2);
