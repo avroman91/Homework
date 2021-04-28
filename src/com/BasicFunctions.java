@@ -26,4 +26,13 @@ public class BasicFunctions {
         }
         return array;
     }
+
+    public static int[] arrayStringToArrayInt (String[] array){
+        int size = array.length;
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = Integer.parseInt(array[i]);
+        }
+        return arr;
+    }
 }
