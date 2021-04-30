@@ -1,7 +1,10 @@
 package com.lesson10;
 
-
 import java.util.Arrays;
+
+/*2*) Реализовать метод который сортирует массив целых чисел быстрой сортировкой
+
+https://en.wikipedia.org/wiki/Quicksort*/
 
 public class HW10QuickSort {
     public static void main(String[] args) {
