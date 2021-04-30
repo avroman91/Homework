@@ -36,7 +36,7 @@ public class HW10MergeSort {
 
         for (int i = finalStart; i < finalStart + iterationCounter; i++) {
 
-            if (firstStart < firstEnd && (secondStart >= secondEnd || first[firstStart]< second[secondStart])) {
+            if (firstStart < firstEnd && (secondStart >= secondEnd || first[firstStart] < second[secondStart])) {
                 finalArray[i] = first[firstStart];
                 firstStart++;
             } else {
