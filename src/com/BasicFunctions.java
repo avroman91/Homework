@@ -1,6 +1,6 @@
 package com;
 
-import java.util.Random;
+import java.util.*;
 
 public class BasicFunctions {
 
@@ -35,4 +35,11 @@ public class BasicFunctions {
         }
         return arr;
     }
+
+    private static List<Integer> removeDuplicates(List<Integer> list) {
+        Set<Integer> set = new HashSet<>(list);
+        return new ArrayList<>(set);
+    }
+
+
 }
