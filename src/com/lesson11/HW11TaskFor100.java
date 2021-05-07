@@ -19,9 +19,9 @@ public class HW11TaskFor100 {
         MatrixOperations matrixOperations = new MatrixOperations();
 //        sortMatrix(matrix);
 //        matrixOperations.print(matrix);
-//        int[][] mat = new int[4][4];
-//        fillMatrixInSpiral(mat);
-//        matrixOperations.print(mat);
+        int[][] mat = new int[5][4]; // [5][6] - не работает
+        fillMatrixInSpiral(mat);
+        matrixOperations.print(mat);
 
     }
 
@@ -40,8 +40,8 @@ public class HW11TaskFor100 {
 
     public static void fillMatrixInSpiral(int[][] array) {
         int insertValue = 1;
-        int initialPositionI = array.length / 2 - 1;
-        int initialPositionJ = array[0].length / 2 - 1;
+        int initialPositionI = array.length %2 == 0 ? array.length / 2 -1 : array.length/2 ;
+        int initialPositionJ = array[0].length %2 == 0 ? array[0].length / 2 -1 : array[0].length/2;
         int vertical = 1;
         int horizontal = 1;
         int goUpOrDown = 2; // %2 = 0 --> true - down & right, false - up and left
@@ -50,25 +50,25 @@ public class HW11TaskFor100 {
         array[initialPositionI][initialPositionJ] = insertValue;
         insertValue++;
         while (insertValue < maxValue) {
-            if (goUpOrDown % 2 == 0 && insertValue < maxValue) {
-                while (vertical > 0) {
+            if (goUpOrDown % 2 == 0) {
+                while (vertical > 0 && insertValue < maxValue && initialPositionI < array.length - 1) {
                     array[++initialPositionI][initialPositionJ] = insertValue;
                     vertical--;
                     insertValue++;
                 }
-                while (horizontal > 0 && insertValue < maxValue) {
+                while (horizontal > 0 && insertValue < maxValue && initialPositionJ < array[0].length - 1) {
                     array[initialPositionI][++initialPositionJ] = insertValue;
                     horizontal--;
                     insertValue++;
                 }
                 goUpOrDown++;
             } else {
-                while (vertical > 0 && insertValue < maxValue) {
+                while (vertical > 0 && insertValue < maxValue && initialPositionI > 0) {
                     array[--initialPositionI][initialPositionJ] = insertValue;
                     vertical--;
                     insertValue++;
                 }
-                while (horizontal > 0 && insertValue < maxValue) {
+                while (horizontal > 0 && insertValue < maxValue && initialPositionJ > 0) {
                     array[initialPositionI][--initialPositionJ] = insertValue;
                     horizontal--;
                     insertValue++;
