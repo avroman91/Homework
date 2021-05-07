@@ -18,7 +18,6 @@ public class MatrixOperations {
         for (int[] ints : matrix) {
             System.out.println(Arrays.toString(ints));
         }
-        ;
     }
 
     public void swapRows(int[][] matrix, int i, int j) {
@@ -43,7 +42,7 @@ public class MatrixOperations {
         }
     }
 
-    public int[] array(int[][] matrix) {
+    public int[] toArray(int[][] matrix) {
         int[] array = new int[matrix.length * matrix[0].length];
         int index = 0;
         for (int i = 0; i < matrix.length; i++) {

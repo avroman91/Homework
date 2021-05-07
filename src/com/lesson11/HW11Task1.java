@@ -5,11 +5,11 @@ import java.util.List;
 
 public class HW11Task1 {
     public static void main(String[] args) {
-        List<Person> peolpe = new ArrayList<>();
+        List<Person> people = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             CreateRandomPerson person = new CreateRandomPerson();
-            peolpe.add(person.randomPerson());
+            people.add(person.randomPerson());
         }
-        System.out.println(peolpe);
+        System.out.println(people);
     }
 }
