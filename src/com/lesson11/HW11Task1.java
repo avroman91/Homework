@@ -7,8 +7,8 @@ public class HW11Task1 {
     public static void main(String[] args) {
         List<Person> people = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            CreateRandomPerson person = new CreateRandomPerson();
-            people.add(person.randomPerson());
+            RandomPersonGenerator person = new RandomPersonGenerator();
+            people.add(person.generateNewRandomPerson());
         }
         System.out.println(people);
     }

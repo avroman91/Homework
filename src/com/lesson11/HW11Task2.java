@@ -8,19 +8,13 @@ public class HW11Task2 {
 
     public static void main(String[] args) {
         MatrixOperations matrixOperations = new MatrixOperations();
-
         matrixOperations.swapRows(matrix, 0, 1);
         matrixOperations.swapRows(matrix, 2, 3);
-
         matrixOperations.swapColumn(matrix, 0, 1);
-
         matrixOperations.mul(matrix, 2);
-
         matrixOperations.print(matrix);
-
         int[] array = matrixOperations.toArray(matrix);
         System.out.println(Arrays.toString(array));
-
         System.out.println(matrixOperations.max(matrix));
     }
 }
