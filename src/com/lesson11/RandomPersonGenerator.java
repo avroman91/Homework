@@ -14,7 +14,7 @@ public class RandomPersonGenerator {
     private String familyName = familyNames[tmp]; // Names and family names are not random, they are from one of the Netflix series. (see name with index 3 in array or google it)
 
     public Person generateNewRandomPerson() {
-        Person person = new Person(name, familyName, age, weight, height);
-        return person;
+        Person generator = new Person(name, familyName, age, weight, height);
+        return generator;
     }
 }
