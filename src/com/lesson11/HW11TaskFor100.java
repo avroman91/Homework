@@ -14,17 +14,17 @@ https://math.all-tests.ru/sites/math.all-tests.ru/files/images/318-problem.png
 public class HW11TaskFor100 {
 
     private static int[][] matrix = {{24, 15, 15}, {19, 19, 20}, {22, 23, 35}};
+    private static int[][] matrixEmpty = new int[5][5];
 
     public static void main(String[] args) {
         MatrixOperations matrixOperations = new MatrixOperations();
 
 //        sortMatrix(matrix);
 //        matrixOperations.print(matrix);
-//
-//        int[][] mat = new int[5][5];
-//        fillMatrixInSpiral(mat);
-//        matrixOperations.print(mat);
-//
+
+//        fillMatrixInSpiral(matrixEmpty);
+//        matrixOperations.print(matrixEmpty);
+
 //        System.out.println(det(matrix));  // only for martix 3x3 (Sarrus rule)
     }
 
