@@ -29,12 +29,12 @@ public class Iterator {
             while (true) {
                 if (counterListTwo < lists.get(i).size() && counterListOne < listForOut.size() && listForOut.get(counterListOne) < lists.get(i).get(counterListTwo)) {
                     counterListOne++;
-                } else if (counterListOne == listForOut.size() || counterListTwo < lists.get(i).size() && counterListOne < listForOut.size() && counterListTwo < lists.get(i).get(counterListTwo) && listForOut.get(counterListOne) >= lists.get(i).get(counterListTwo)) {
+                } else if (counterListOne == listForOut.size() ||
+                        counterListTwo < lists.get(i).size() && counterListOne < listForOut.size()
+                                && counterListTwo < lists.get(i).get(counterListTwo) && listForOut.get(counterListOne) >= lists.get(i).get(counterListTwo)) {
                     listForOut.add(counterListOne, lists.get(i).get(counterListTwo));
                     counterListTwo++;
                 } else {
-                    counterListOne = 0;
-                    counterListTwo = 0;
                     break;
                 }
             }
