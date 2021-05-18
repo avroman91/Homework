@@ -13,10 +13,10 @@ public class HW12Task2 {
         System.out.println(reverseAndUpperCaseAtFirstChar(test));
     }
 
-    private static String reverseAndUpperCaseAtFirstChar (String input) {
+    private static String reverseAndUpperCaseAtFirstChar(String input) {
         String[] split = input.split("\\s+");
         StringBuilder reformatedStringBuiler = new StringBuilder();
-        for (int i = split.length-1; i >= 0; i--) {
+        for (int i = split.length - 1; i >= 0; i--) {
             String temp = split[i].toLowerCase(Locale.ROOT);
             temp = temp.replaceFirst(String.valueOf(temp.charAt(0)), String.valueOf(Character.toUpperCase(temp.charAt(0))));
             reformatedStringBuiler.append(temp).append(" ");
