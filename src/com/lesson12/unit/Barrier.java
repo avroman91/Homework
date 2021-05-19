@@ -7,8 +7,8 @@ public class Barrier extends Unit {
     private boolean destroyed;
 
     public Barrier(int locationX, int locationY) {
-        super(locationX ,locationY);
-        unitMap.put("("+locationX + ";" + locationY+")", "Barrier");
+        super(locationX, locationY);
+        unitMap.put("(" + locationX + ";" + locationY + ")", "Barrier");
 
     }
 

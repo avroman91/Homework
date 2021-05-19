@@ -18,17 +18,17 @@ import java.util.HashMap;
 public class Unit {
 
     public static void main(String[] args) {
-        Tank tank1 = new Tank(1,5);
-        Soldier Petka = new Soldier(2,3);
-        Barrier cube = new Barrier(3,4);
-        Barrier cube2 = new Barrier(1,2);
-        Tower tower1 = new Tower(1,4);
+        Tank tank1 = new Tank(1, 5);
+        Soldier Petka = new Soldier(2, 3);
+        Barrier cube = new Barrier(3, 4);
+        Barrier cube2 = new Barrier(1, 2);
+        Tower tower1 = new Tower(1, 4);
         System.out.println(unitMap);
     }
 
     protected int locationX;
     protected int locationY;
-    protected static HashMap<String , String> unitMap = new HashMap<String, String>();
+    protected static HashMap<String, String> unitMap = new HashMap<String, String>();
 
     public Unit(int locationX, int locationY) {
         this.locationX = locationX;
