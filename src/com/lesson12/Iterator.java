@@ -17,7 +17,7 @@ public class Iterator {
                 if ((counterListTwo == lists.get(1).size() && counterListOne < lists.get(0).size()) || counterListOne < lists.get(0).size() && lists.get(0).get(counterListOne) <= lists.get(1).get(counterListTwo)) {
                     listForOut.add(lists.get(0).get(counterListOne));
                     counterListOne++;
-                } else if ((counterListOne == lists.get(0).size() &&counterListTwo < lists.get(1).size()) || counterListTwo < lists.get(1).size() && lists.get(1).get(counterListOne) >= lists.get(1).get(counterListTwo)) {
+                } else if ((counterListOne == lists.get(0).size() && counterListTwo < lists.get(1).size()) || counterListTwo < lists.get(1).size() && lists.get(1).get(counterListOne) >= lists.get(1).get(counterListTwo)) {
                     listForOut.add(lists.get(1).get(counterListTwo));
                     counterListTwo++;
                 } else {
