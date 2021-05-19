@@ -14,10 +14,10 @@ public class Iterator {
             int counterListOne = 0;
             int counterListTwo = 0;
             while (i == 0) {
-                if (counterListOne < lists.get(0).size() && lists.get(0).get(counterListOne) <= lists.get(1).get(counterListTwo)) {
+                if ((counterListTwo == lists.get(1).size() && counterListOne < lists.get(0).size()) || counterListOne < lists.get(0).size() && lists.get(0).get(counterListOne) <= lists.get(1).get(counterListTwo)) {
                     listForOut.add(lists.get(0).get(counterListOne));
                     counterListOne++;
-                } else if (counterListTwo < lists.get(1).size() && lists.get(1).get(counterListOne) >= lists.get(1).get(counterListTwo)) {
+                } else if ((counterListOne == lists.get(0).size() &&counterListTwo < lists.get(1).size()) || counterListTwo < lists.get(1).size() && lists.get(1).get(counterListOne) >= lists.get(1).get(counterListTwo)) {
                     listForOut.add(lists.get(1).get(counterListTwo));
                     counterListTwo++;
                 } else {
