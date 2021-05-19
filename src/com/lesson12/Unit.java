@@ -1,4 +1,9 @@
-package com.lesson12.Task1;
+package com.lesson12;
+
+import com.lesson12.unit.Barrier;
+import com.lesson12.unit.Soldier;
+import com.lesson12.unit.Tank;
+import com.lesson12.unit.Tower;
 
 import java.util.HashMap;
 

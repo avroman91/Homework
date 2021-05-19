@@ -1,4 +1,4 @@
-package com.lesson12.Task1;
+package com.lesson12.unit;
 
 public class Soldier extends MovableUnit {
     public Soldier(int locationX, int locationY) {
