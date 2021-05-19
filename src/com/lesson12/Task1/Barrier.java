@@ -1,12 +1,12 @@
 package com.lesson12.Task1;
 
-public class Barrier extends HW12Task1 {
+public class Barrier extends Unit {
 
     private boolean destroyed;
 
-    public Barrier(int location) {
-        super(location);
-        objectMap.put(location, "Barrier");
+    public Barrier(int locationX, int locationY) {
+        super(locationX ,locationY);
+        unitMap.put("("+locationX + ";" + locationY+")", "Barrier");
 
     }
 

@@ -1,9 +1,10 @@
 package com.lesson12.Task1;
 
-public class Tank extends Soldier {
-    public Tank(int location) {
-        super(location);
-        objectMap.put(location, "Tank");
+public class Tank extends MovableUnit {
+
+    public Tank(int locationX, int locationY) {
+        super(locationX ,locationY);
+        unitMap.put("("+locationX + ";" + locationY+")", "Tank");
     }
 
     public void reload() {

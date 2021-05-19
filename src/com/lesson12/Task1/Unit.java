@@ -10,20 +10,23 @@ import java.util.HashMap;
 Танк умеет то же что и солдат, плюс еще у него есть метод reload()
 */
 
-public class HW12Task1 {
+public class Unit {
 
     public static void main(String[] args) {
-        Tank tank1 = new Tank(1);
-        Soldier Petka = new Soldier(2);
-        Barrier cube = new Barrier(3);
-        Barrier cube2 = new Barrier(5);
-        Tower tower1 = new Tower(4);
-        System.out.println(objectMap);
+        Tank tank1 = new Tank(1,5);
+        Soldier Petka = new Soldier(2,3);
+        Barrier cube = new Barrier(3,4);
+        Barrier cube2 = new Barrier(1,2);
+        Tower tower1 = new Tower(1,4);
+        System.out.println(unitMap);
     }
 
-    protected int location;
-    protected static HashMap<Integer, String> objectMap = new HashMap<Integer, String>();
+    protected int locationX;
+    protected int locationY;
+    protected static HashMap<String , String> unitMap = new HashMap<String, String>();
 
-    public HW12Task1(int location) {
+    public Unit(int locationX, int locationY) {
+        this.locationX = locationX;
+        this.locationY = locationY;
     }
 }
