@@ -8,6 +8,8 @@ package com.lesson11;
 не было человека весом 3 кг и ростом 180 итд.
 */
 
+import java.util.Objects;
+
 public class Person {
 
     private String name;
@@ -27,6 +29,19 @@ public class Person {
     public Person(String name, String familyName) {
         this.name = name;
         this.familyName = familyName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(name, person.name) && Objects.equals(familyName, person.familyName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, familyName);
     }
 
     @Override
