@@ -59,9 +59,7 @@ public class LongMath {
         }
         if (st.length() < x.length() && doz == 0) {
             int difference = x.length() - st.length();
-            for (int i = 0; i < difference; i++) {
-                st.insert(i, x.charAt(i));
-            }
+                st.insert(0, x.substring(0,difference));
         }
         while (true) {
             if (Integer.parseInt(String.valueOf(st.charAt(0))) == 0) {
