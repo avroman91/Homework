@@ -16,18 +16,24 @@ import java.util.Set;
 */
 
 public class HW13Task1 {
+
     public static void main(String[] args) {
-        List<Person> people = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            RandomPersonGenerator generator = new RandomPersonGenerator();
-            people.add(generator.generateNewRandomPerson());
-        }
+        List<Person> people = hundrentOfPersons();
         System.out.println(getPeople(people));
         System.out.println(getPeople(people).size());
 
     }
 
-    private static Set<Person> getPeople(List<Person> people) {
+    protected static List<Person> hundrentOfPersons() {
+        List<Person> people = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            RandomPersonGenerator generator = new RandomPersonGenerator();
+            people.add(generator.generateNewRandomPerson());
+        }
+        return people;
+    }
+
+    protected static Set<Person> getPeople(List<Person> people) {
         return new HashSet<>(people);
     }
 

@@ -14,16 +14,22 @@ public class Person {
 
     private String name;
     private String familyName;
-    private int age;
+    private String dateOfBirth;
     private int weight;
     private int height;
 
-    public Person(String name, String familyName, int age, int weight, int height) {
+    public Person(String name, String familyName, String dateOfBirth, int weight, int height) {
         this.name = name;
         this.familyName = familyName;
-        this.age = age;
+        this.dateOfBirth = dateOfBirth;
         this.weight = weight;
         this.height = height;
+    }
+
+    public Person(String name, String familyName, String dateOfBirth) {
+        this.name = name;
+        this.familyName = familyName;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Person(String name, String familyName) {
@@ -44,12 +50,16 @@ public class Person {
         return Objects.hash(name, familyName);
     }
 
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", familyName='" + familyName + '\'' +
-                ", age=" + age +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", weight=" + weight +
                 ", height=" + height +
                 '}';
