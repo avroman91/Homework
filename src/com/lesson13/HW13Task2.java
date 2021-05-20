@@ -30,8 +30,7 @@ public class HW13Task2 extends HW13Task1{
             } else {
                 age = calendar.get(Calendar.YEAR) - Integer.parseInt(person.getDateOfBirth().substring(6,10))-1;
             }
-        }
-        if (Integer.parseInt(person.getDateOfBirth().substring(3,5)) > calendar.get(Calendar.MONTH)){
+        } else if (Integer.parseInt(person.getDateOfBirth().substring(3,5)) > calendar.get(Calendar.MONTH)){
             age = calendar.get(Calendar.YEAR) - Integer.parseInt(person.getDateOfBirth().substring(6,10))-1;
         } else {
             age = calendar.get(Calendar.YEAR) - Integer.parseInt(person.getDateOfBirth().substring(6,10));
