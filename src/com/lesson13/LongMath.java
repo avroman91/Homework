@@ -34,10 +34,10 @@ public class LongMath {
                     break;
                 } else {
                     for (int j = 0; j < x.length(); j++) {
-                        if (Integer.parseInt(String.valueOf(x.charAt(j))) > Integer.parseInt(String.valueOf(y.charAt(j)))){
+                        if (Integer.parseInt(String.valueOf(x.charAt(j))) > Integer.parseInt(String.valueOf(y.charAt(j)))) {
                             tmp = greaterMinusSmallerValue(x, y);
                             break;
-                        } else if (Integer.parseInt(String.valueOf(x.charAt(j))) < Integer.parseInt(String.valueOf(y.charAt(j)))){
+                        } else if (Integer.parseInt(String.valueOf(x.charAt(j))) < Integer.parseInt(String.valueOf(y.charAt(j)))) {
                             tmp = greaterMinusSmallerValue(y, x);
                             tmp.insert(0, "-");
                             break;
@@ -87,7 +87,7 @@ public class LongMath {
 
     public static String division(String x, String y) {
         if (y.length() == 1 && Integer.parseInt(String.valueOf(y.charAt(0))) == 0) {
-            return  "Dividing by zero is prohibited";
+            return "Dividing by zero is prohibited";
         }
         int counter = 0;
         while (true) {
@@ -103,5 +103,4 @@ public class LongMath {
 
         return String.valueOf(counter);
     }
-
 }
