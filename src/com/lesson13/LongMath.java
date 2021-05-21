@@ -18,6 +18,16 @@ public class LongMath {
         }
         st.insert(0, x.length() > y.length() ? x.substring(0, x.length() - y.length()) : "");
         st.insert(0, x.length() < y.length() ? y.substring(0, y.length() - x.length()) : "");
+        if (doz == 1 && (st.length() - limit > 0)) {
+            int dozRepair = Integer.parseInt(String.valueOf(st.charAt(st.length() - limit))) + doz;
+            st.replace(st.length() - limit, st.length() - limit + 1, String.valueOf(dozRepair));
+        }
+        else if (doz == 1 && (Integer.parseInt(x.substring(0,1)) + Integer.parseInt(y.substring(0,1))) >= 10) {
+            st.insert(0,doz);
+        } else {
+            st.replace(0,1, String.valueOf((Integer.parseInt(st.substring(0,1))+doz)));
+
+        }
         return st.toString();
     }
 
@@ -100,7 +110,19 @@ public class LongMath {
                 break;
             }
         }
-
         return String.valueOf(counter);
+    }
+
+    public static String mult(String x, String y) {
+        String tmp = x;
+        for (int i = 0; i < y.length(); i++) {
+            int steps = Integer.parseInt(String.valueOf(y.charAt(y.length() - i - 1)));
+            steps = (int) (steps * (Math.pow(10, i)));
+            while (steps != 0) {
+                tmp = sum(tmp, x);
+                steps--;
+            }
+        }
+        return LongMath.subtraction(tmp,x);
     }
 }
