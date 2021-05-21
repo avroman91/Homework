@@ -21,7 +21,7 @@ public class LongMath {
         return st.toString();
     }
 
-    public static String substraction(String x, String y) {
+    public static String subtraction(String x, String y) {
         StringBuilder tmp = new StringBuilder();
         if (x.length() == y.length()) {
             for (int i = 0; i < x.length() - 1; i++) {
@@ -32,6 +32,20 @@ public class LongMath {
                     tmp = greaterMinusSmallerValue(y, x);
                     tmp.insert(0, "-");
                     break;
+                } else {
+                    for (int j = 0; j < x.length(); j++) {
+                        if (Integer.parseInt(String.valueOf(x.charAt(j))) > Integer.parseInt(String.valueOf(y.charAt(j)))){
+                            tmp = greaterMinusSmallerValue(x, y);
+                            break;
+                        } else if (Integer.parseInt(String.valueOf(x.charAt(j))) < Integer.parseInt(String.valueOf(y.charAt(j)))){
+                            tmp = greaterMinusSmallerValue(y, x);
+                            tmp.insert(0, "-");
+                            break;
+                        }
+                    }
+                    if (tmp.length() == 0) {
+                        tmp.insert(0, "0");
+                    }
                 }
             }
         } else if (x.length() > y.length()) {
@@ -59,7 +73,7 @@ public class LongMath {
         }
         if (st.length() < x.length() && doz == 0) {
             int difference = x.length() - st.length();
-                st.insert(0, x.substring(0,difference));
+            st.insert(0, x.substring(0, difference));
         }
         while (true) {
             if (Integer.parseInt(String.valueOf(st.charAt(0))) == 0) {
@@ -69,6 +83,25 @@ public class LongMath {
             }
         }
         return st;
+    }
+
+    public static String division(String x, String y) {
+        if (y.length() == 1 && Integer.parseInt(String.valueOf(y.charAt(0))) == 0) {
+            return  "Dividing by zero is prohibited";
+        }
+        int counter = 0;
+        while (true) {
+            if (x.length() > y.length() || (x.length() == y.length() && x.charAt(0) >= y.charAt(0))) {
+                x = subtraction(x, y);
+                if (x.charAt(0) != '-') {
+                    counter++;
+                }
+            } else {
+                break;
+            }
+        }
+
+        return String.valueOf(counter);
     }
 
 }
