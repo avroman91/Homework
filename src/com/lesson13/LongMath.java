@@ -1,5 +1,11 @@
 package com.lesson13;
-
+/*
+Заполните на 100 баллов:
+Написать класс который реализует 4 арифметическое операции + - * / для длинных чисел которые заданные как строка
+Например:
+String s = LongMath.sum("123", "456");
+Размер чисел не ограничен, хоть 1000 символов. Не использовать готовые библиотеки типа LongInt
+*/
 public class LongMath {
     public static String sum(String x, String y) {
         StringBuilder st = new StringBuilder();

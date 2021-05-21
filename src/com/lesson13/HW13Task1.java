@@ -21,7 +21,6 @@ public class HW13Task1 {
         List<Person> people = hundrentOfPersons();
         System.out.println(getPeople(people));
         System.out.println(getPeople(people).size());
-
     }
 
     protected static List<Person> hundrentOfPersons() {

@@ -1,15 +1,14 @@
 package com.lesson13;
 
-/*
-2*) Вместо поля возраст добавить поле дата рождения как строка типа "18.12.1985"
-- добавить метод который выводит количество полных лет на данным момент.
-*/
-
 import com.lesson11.Person;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/*
+2*) Вместо поля возраст добавить поле дата рождения как строка типа "18.12.1985"
+- добавить метод который выводит количество полных лет на данным момент.
+*/
 
 public class HW13Task2 extends HW13Task1 {
 
@@ -18,7 +17,6 @@ public class HW13Task2 extends HW13Task1 {
         Person[] peopleSet = getPeople(hundrentOfPersons()).toArray(new Person[0]);
         System.out.println(peopleSet[1].getDateOfBirth());
         System.out.println(getAge(peopleSet[1]));
-
     }
 
     private static int getAge(Person person) {
