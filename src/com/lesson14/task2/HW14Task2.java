@@ -21,7 +21,7 @@ https://drive.google.com/open?id=1wVBKKxpTKvWwuCzqY1cVXCQZYCsdCXTl
 сделать дз 14.2 (вывести 10 доменов которые встречаются чаще всего), но при этом файл не хранить в файловой системе а зпгружать по прямой ссылке ссылке программно:
 https://dl.dropboxusercontent.com/s/21rtgfdmlp6wycx/urls.txt
 */
-public class Main {
+public class HW14Task2 {
 
     public static void main(String[] args) throws Exception {
 
