@@ -6,8 +6,6 @@ public class Main {
         group.addStudent(new Student("Roman", "Romanov"));
         group.addStudent(new Student("Ivan", "Ivanov"));
         group.addStudent(new Student("Sergei", "Synergetic"));
-        group.addStudent(new Student("Tamara", "Bethena"));
-        group.addStudent(new Student("Mike", "Michelson"));
 
         System.out.println(group);
         group.printList();
