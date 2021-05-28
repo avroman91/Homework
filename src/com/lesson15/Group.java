@@ -21,10 +21,6 @@ public class Group {
         studentList.add(student);
     }
 
-    @Override
-    public String toString() {
-        return courseName + '_' + startDate;
-    }
 
     public void printList() {
         for (Student student : studentList) {
@@ -44,5 +40,9 @@ public class Group {
             }
         }
         return false;
+    }
+
+    public String getName() {
+            return courseName + '_' + startDate;
     }
 }
